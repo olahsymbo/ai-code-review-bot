@@ -1,4 +1,4 @@
-# AI Code Review Bot 🤖🚀  
+# AI Code Review Bot 🤖
 
 AI Code Review Bot automates code analysis, detects potential issues, enforces best practices, and optimizes performance in your repository.  
 
