@@ -6,7 +6,6 @@ AI Code Review Bot automates code analysis, detects potential issues, enforces b
 - Automated code reviews using AI  
 - Detection of common coding issues  
 - Performance optimization suggestions  
-- Enforces best practices and coding standards  
 - Runs automatically on new commits and pull requests  
 
 ## 📂 Repository Structure  
