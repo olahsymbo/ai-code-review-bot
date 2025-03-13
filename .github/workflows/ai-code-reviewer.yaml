@@ -48,7 +48,7 @@ jobs:
             -d "{
                   \"model\": \"gpt-3.5-turbo\",
                   \"messages\": [
-                    {\"role\": \"system\", \"content\": \"You are an AI code reviewer. Review the following code for quality, potential issues, and improvements.\"},
+                    {\"role\": \"system\", \"content\": \"You are an AI code reviewer. Review the following code for quality, potential issues, and improvements. Limit your comments to max of 60 words\"},
                     {\"role\": \"user\", \"content\": $CODE_CONTENT}
                   ],
                   \"temperature\": 0.2,
