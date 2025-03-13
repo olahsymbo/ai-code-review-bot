@@ -1,30 +1,30 @@
 import numpy as np
 
-def compute_cost(X, y, theta):
-    m = len(y) 
-    predictions = X.dot(theta)
-    error = predictions - y
-    cost = (1 / (2 * m)) * np.sum(error ** 2)
+def compute_cost(input_data, target, theta):
+    target_size = len(target) 
+    predictions = input_data.dot(theta)
+    error = predictions - target
+    cost = (1 / (2 * target_size)) * np.sum(error ** 2)
     return cost
 
-def gradient_descent(X, y, theta, alpha, iterations):
-    m = len(y)
+def gradient_descent(input_data, target, theta, alpha, iterations):
+    target_size = len(target)
     cost_history = []
 
     for _ in range(iterations):
-        gradient = (1 / m) * X.T.dot(X.dot(theta) - y)
+        gradient = (1 / target_size) * input_data.T.dot(input_data.dot(theta) - target)
         theta -= alpha * gradient
-        cost_history.append(compute_cost(X, y, theta))
+        cost_history.append(compute_cost(input_data, target, theta))
 
     return theta, cost_history
 
 
 if __name__ == "__main__":
   
-  X = np.array([[1], [2], [3], [4], [5]]) 
-  y = np.array([2, 4, 6, 8, 10]) 
+  data = np.array([[1], [2], [3], [4], [5]]) 
+  target = np.array([2, 4, 6, 8, 10]) 
   
-  X_b = np.c_[np.ones((len(X), 1)), X] 
+  data_biased = np.c_[np.ones((len(data), 1)), data] 
   
   theta_init = np.random.randn(2, 1) 
   
@@ -32,6 +32,6 @@ if __name__ == "__main__":
   alpha = 0.01  
   iterations = 100
   
-  theta_optimal, cost_history = gradient_descent(X_b, y.reshape(-1, 1), theta_init, alpha, iterations)
+  theta_optimal, cost_history = gradient_descent(data_biased, target.reshape(-1, 1), theta_init, alpha, iterations)
   
   print("Optimized Theta (Weights):\n", theta_optimal)
