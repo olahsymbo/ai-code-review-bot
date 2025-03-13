@@ -38,9 +38,3 @@ Before running the bot, you need to set the following **GitHub repository secret
 ### 3️⃣ Run Code Review  
 - Push a new commit or create a pull request.  
 - The bot will automatically review the code and leave comments on detected issues.  
-
-## 🛠️ Contributing  
-Feel free to submit pull requests or open issues to improve this project!  
-
-## 📜 License  
-This project is open-source and available under the [MIT License](LICENSE).  
