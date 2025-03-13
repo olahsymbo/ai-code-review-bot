@@ -17,7 +17,7 @@ AI Code Review Bot automates code analysis, detects potential issues, enforces b
 ├── README.md                   
 ```
 
-## 🚀 Setup & Usage  
+## Setup & Usage  
 
 ### 1️⃣ Enable GitHub Actions  
 Ensure GitHub Actions is enabled in your repository to allow the workflow to run.  
